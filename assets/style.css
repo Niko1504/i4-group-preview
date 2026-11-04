@@ -52,6 +52,8 @@ h1{font-size:clamp(34px,5.4vw,62px);line-height:1.04;letter-spacing:-.03em;max-w
 .fact b{display:block;font-size:26px;letter-spacing:-.02em}
 .fact span{display:block;color:#8f8c84;font-size:12.5px;margin-top:6px}
 .fact em{font-style:normal;color:var(--accent-2);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.fact a.src{display:inline-block;margin-left:8px;font-size:11px;color:#8f8c84;text-decoration:underline;text-underline-offset:2px}
+.fact a.src:hover{color:#fff}
 
 /* sections */
 section{padding:76px 0}
