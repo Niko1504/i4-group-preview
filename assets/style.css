@@ -141,6 +141,8 @@ textarea{min-height:110px;resize:vertical}
 .gap-card .no:before{content:"НЕТ";flex:0 0 auto;font-size:10.5px;letter-spacing:.08em;color:#a13d1e;border:1px solid #e8bfae;background:#fbeee7;border-radius:5px;padding:2px 6px;height:fit-content;margin-top:2px}
 .gap-card .yes:before{content:"У НАС";flex:0 0 auto;font-size:10.5px;letter-spacing:.08em;color:#2f6b3f;border:1px solid #bcd9c4;background:#eef7f0;border-radius:5px;padding:2px 6px;height:fit-content;margin-top:2px}
 .gap-card .no{color:var(--muted)}
+.gap-card .explain{font-size:13px;line-height:1.5;color:var(--ink);border-top:1px dashed var(--line);padding-top:12px;margin-top:auto}
+.gap-card .explain:before{content:"ПРОСТЫМИ СЛОВАМИ";display:block;font-size:11px;letter-spacing:.08em;color:#4a4842;margin-bottom:6px}
 .gap-card h3{margin:0;font-size:17px}
 
 @media (max-width:960px){
