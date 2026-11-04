@@ -14,6 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  document.querySelectorAll('.explain, .glossary').forEach((box) => {
+    box.hidden = true;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'js-reveal';
+    btn.textContent = 'Простыми словами ↓';
+    btn.setAttribute('aria-expanded', 'false');
+    box.parentNode.insertBefore(btn, box);
+    btn.addEventListener('click', () => {
+      const willOpen = box.hidden;
+      box.hidden = !willOpen;
+      btn.setAttribute('aria-expanded', String(willOpen));
+      btn.textContent = willOpen ? 'Свернуть ↑' : 'Простыми словами ↓';
+    });
+  });
+
   document.querySelectorAll('.js-toggle').forEach((btn) => {
     const list = document.getElementById(btn.dataset.target);
     if (!list) return;
