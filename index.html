@@ -39,7 +39,7 @@
     <p class="lead">12 недель приводим цифры, документы и питч в вид, в котором фонд готов смотреть сделку. Потом знакомим лично: фонды и ангелы Европы, США, Ближнего Востока.</p>
     <div class="hero-cta">
       <a class="btn btn-accent" href="#form">Подать проект</a>
-      <a class="btn btn-ghost" href="#how">Как проходит отбор →</a>
+      <a class="btn btn-ghost" href="#included">Что входит в программу →</a>
     </div>
     <div class="facts">
       <div class="fact"><b>12&nbsp;недель</b><span>программа подготовки к раунду</span><em>что мы обещаем</em></div>
@@ -94,6 +94,7 @@
       <h2 class="serif">Программы</h2>
       <p>Четыре программы, один результат — следующий раунд. Каждая заканчивается тем, что можно показать инвестору.</p>
     </div>
+    <div class="prog-list" id="progList" hidden>
     <div class="grid-2">
       <article class="pcard">
         <div>
@@ -132,6 +133,10 @@
         <div class="foot"><span class="status">По заявке</span><a class="btn btn-ghost" href="program.html#landing">Подробнее</a></div>
       </article>
     </div>
+    </div>
+    <div class="prog-more">
+      <button type="button" class="btn btn-ghost js-toggle" id="progToggle" aria-expanded="false" aria-controls="progList" data-target="progList" data-more="Показать все программы ↓" data-less="Свернуть ↑">Показать все программы ↓</button>
+    </div>
   </div>
 </section>
 
@@ -152,27 +157,13 @@
   </div>
 </section>
 
-<section id="how">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="serif">Отбор: две недели от заявки до решения</h2>
-      <p>Четыре шага. Отказ — с письменной причиной, чтобы было понятно, что исправлять.</p>
-    </div>
-    <div class="steps">
-      <div class="step"><b>01 · ЗАЯВКА</b><h4>Форма на сайте</h4><p>20 минут: продукт, стадия, метрики, команда.</p></div>
-      <div class="step"><b>02 · СКРИНИНГ</b><h4>Созвон 30 минут</h4><p>Проверяем рынок и стадию, отвечаем на вопросы.</p></div>
-      <div class="step"><b>03 · РАЗБОР</b><h4>Питч перед инвестором</h4><p>Разбор модели и слабых мест, оценка потенциала.</p></div>
-      <div class="step"><b>04 · РЕШЕНИЕ</b><h4>Оффер за 14 дней</h4><p>Условия участия: деньги, доля или сервисная модель.</p></div>
-    </div>
-  </div>
-</section>
-
 <section class="prog" id="funds">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="serif">Как выводим на международные фонды</h2>
       <p>Пять шагов от карты фондов до term sheet. Это работа, а не рассылка дека по почте.</p>
     </div>
+    <div class="prog-list" id="fundsList" hidden>
     <div class="grid-3">
       <div class="pcard"><div><span class="tag">01 · карта</span><h3>Отбор фондов</h3><p>Собираем 40 целей на когорту: стадия, отрасль, география, размер чека, кто в фонде принимает решение по вашему рынку.</p></div></div>
       <div class="pcard"><div><span class="tag">02 · упаковка</span><h3>Материалы на английском</h3><p>Дек на 10 слайдов, one-pager, data room: метрики, финмодель, cap table, юрдокументы. Фонд получает пакет, а не переписку.</p></div></div>
@@ -181,7 +172,11 @@
       <div class="pcard"><div><span class="tag">05 · сделка</span><h3>До term sheet</h3><p>Сопровождение переговоров, оценка, условия, юрист на вашей стороне. Дальше — закрытие раунда.</p></div></div>
       <div class="pcard"><div><span class="tag">куда</span><h3>Какие фонды</h3><p>VC Европы, США и Ближнего Востока на pre-seed и seed, фонды с фокусом на Кавказ и CEE, синдикаты диаспоры, корпоративные инвесторы.</p></div></div>
     </div>
-    <p class="hint" style="margin-top:18px">Список партнёрских фондов формируется под первую когорту: публикуем только тех, кто дал согласие на упоминание. Вывод на фонд не гарантирует инвестицию — решение принимает фонд.</p>
+      <p class="hint" style="margin-top:18px">Список партнёрских фондов формируется под первую когорту: публикуем только тех, кто дал согласие на упоминание. Вывод на фонд не гарантирует инвестицию — решение принимает фонд.</p>
+    </div>
+    <div class="prog-more">
+      <button type="button" class="btn btn-ghost js-toggle" id="fundsToggle" aria-expanded="false" aria-controls="fundsList" data-target="fundsList" data-more="Показать все шаги ↓" data-less="Свернуть ↑">Показать все шаги ↓</button>
+    </div>
   </div>
 </section>
 

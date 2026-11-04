@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  document.querySelectorAll('.js-toggle').forEach((btn) => {
+    const list = document.getElementById(btn.dataset.target);
+    if (!list) return;
+    btn.addEventListener('click', () => {
+      const willOpen = list.hasAttribute('hidden');
+      if (willOpen) { list.removeAttribute('hidden'); }
+      else { list.setAttribute('hidden', ''); }
+      btn.setAttribute('aria-expanded', String(willOpen));
+      btn.textContent = willOpen ? btn.dataset.less : btn.dataset.more;
+    });
+  });
+
   const form = document.getElementById('applyForm');
   if (!form) return;
   const note = document.getElementById('formNote');

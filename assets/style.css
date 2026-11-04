@@ -205,3 +205,10 @@ thead th.mine{color:var(--accent)}
   .form{grid-template-columns:1fr;padding:20px}
   .hero-cta .btn,.cta-row .btn{width:100%}
 }
+
+/* раскрывающийся список программ */
+[hidden]{display:none !important}
+.prog-more{display:flex;justify-content:center;margin-top:26px}
+.prog-more .btn{min-width:240px;justify-content:center;padding:13px 22px}
+.js-toggle{color:var(--accent-2);border-color:rgba(226,85,44,.55);background:rgba(226,85,44,.08)}
+.js-toggle:hover{background:rgba(226,85,44,.16)}
