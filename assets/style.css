@@ -41,10 +41,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(11,13,16,.92);backdrop-f
 
 /* hero */
 .hero{background:var(--ink);color:#fff;padding:88px 0 64px;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url("img/hero-tbilisi.jpg") center 42%/cover no-repeat;opacity:.85}
-.hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(101deg,rgba(11,13,16,.96) 0%,rgba(11,13,16,.62) 52%,rgba(11,13,16,.82) 100%)}
 .hero>.wrap{position:relative;z-index:1}
-@media(max-width:760px){.hero-bg:after{background:linear-gradient(180deg,rgba(11,13,16,.92) 0%,rgba(11,13,16,.68) 38%,rgba(11,13,16,.95) 100%)}}
 .hero:after{content:"";position:absolute;inset:auto -20% -60% -20%;height:70%;background:radial-gradient(60% 100% at 50% 0,rgba(226,85,44,.28),transparent 70%);pointer-events:none}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);font-weight:600;margin-bottom:22px}
 .eyebrow:before{content:"";width:26px;height:1px;background:var(--accent-2)}
@@ -247,14 +244,22 @@ thead th.mine{color:var(--accent)}
 .ava.big{width:64px;height:64px;font-size:20px}
 .origin-text p{margin:0 0 12px}
 .origin-text .lead{font-size:15px;line-height:1.5;color:#2b2a30}
-.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0 16px}
-.facts>div{border:1px solid #e6e4ea;border-radius:12px;padding:12px 14px;background:#faf9fb}
-.facts b{display:block;font-size:19px;letter-spacing:-.3px;margin-bottom:4px}
-.facts span{font-size:12px;color:#55525e;line-height:1.35;display:block}
 .origin-text a{color:var(--accent-2)}
-@media(max-width:860px){.origin{grid-template-columns:1fr;gap:20px}.facts{grid-template-columns:1fr 1fr}}
-@media(max-width:420px){.facts{grid-template-columns:1fr}}
 
 .banner{margin:22px 0 28px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#eae7df}
 .banner img{display:block;width:100%;height:clamp(210px,31vw,380px);object-fit:cover}
 @media(max-width:560px){.banner img{height:210px}}
+
+.hero-shot{margin:30px 0 6px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.14);box-shadow:0 22px 60px rgba(0,0,0,.38)}
+.hero-shot img{display:block;width:100%;height:clamp(190px,30vw,400px);object-fit:cover}
+@media(max-width:760px){.hero-shot img{height:230px}}
+
+/* путь к раунду */
+.path{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}
+.path-list{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;list-style:none;padding:0;margin:0;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.path-list li{background:#fff;padding:20px 18px}
+.path-list b{display:block;color:var(--accent);font-size:12px;letter-spacing:.1em}
+.path-list span{display:block;font-weight:700;font-size:17px;margin:6px 0 6px}
+.path-list em{font-style:normal;color:var(--muted);font-size:13px;line-height:1.35;display:block}
+@media(max-width:900px){.path-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.path-list{grid-template-columns:1fr}.path{padding:44px 0}}
