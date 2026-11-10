@@ -3,15 +3,15 @@
 Токен берётся из ~/.hermes/credentials/vercel/vercel.env, в вывод не печатается.
 Использование: python3 deploy_vercel.py [khidi-lab|tbilisi-deal-day]
 """
-import json, os, sys, time, urllib.request, urllib.error
+import base64, json, os, sys, time, urllib.request, urllib.error
 
 ENV = os.path.expanduser("~/.hermes/credentials/vercel/vercel.env")
 TEAM = "team_1lRhG5UkoonfR74UvLGbmVUh"
 
 TARGETS = {
-    "khidi-lab": {
+    "i4-group": {
         "proj": "prj_2LKo8NtgmK1fVXk5Zy5HgPwRJVzf",
-        "root": "/Users/georgiacars/projects/jarvis-projects/Projects/Unicorns/khidi-lab",
+        "root": "/Users/georgiacars/projects/jarvis-projects/Projects/Unicorns/i4-group",
     },
     "tbilisi-deal-day": {
         "proj": "prj_gCisU5JOO8QZwL2u6xsQ92SgHnj3",
@@ -50,7 +50,7 @@ def api(path, method="GET", body=None):
 
 
 def main():
-    name = sys.argv[1] if len(sys.argv) > 1 else "khidi-lab"
+    name = sys.argv[1] if len(sys.argv) > 1 else "i4-group"
     t = TARGETS[name]
     root, proj = t["root"], t["proj"]
 
@@ -63,7 +63,8 @@ def main():
             try:
                 files.append({"file": rel, "data": open(full, "r", encoding="utf-8").read()})
             except UnicodeDecodeError:
-                continue
+                files.append({"file": rel, "data": base64.b64encode(open(full, "rb").read()).decode(),
+                              "encoding": "base64"})
     print("файлов:", len(files))
 
     d = api(f"/v13/deployments?teamId={TEAM}&forceNew=1", "POST",
