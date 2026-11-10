@@ -271,4 +271,10 @@ thead th.mine{color:var(--accent)}
 .lang a{color:#8f8c84;text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
 .lang a:hover{color:#fff}
 .lang a.on{color:#fff;font-weight:700;border-bottom-color:var(--accent)}
-@media(max-width:760px){.lang{order:3}}
+@media(max-width:760px){.lang{margin-left:auto;margin-right:14px;gap:12px;font-size:12px}}
+
+/* 320px: поля формы и длинные слова не расширяют страницу */
+.form{min-width:0}
+.field{min-width:0}
+.field input,.field select,.field textarea{width:100%;min-width:0;max-width:100%}
+h1,h1 .hl,p,li,td,th{overflow-wrap:break-word}
